@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: serif;
+            font-size: 20px;
+            background-image: url("Assets/background.jpg");
+            background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+			text-align: center;
+			color: #000;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f2cda5;
+            border: 3px solid black;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #d4cda5;
+        }
+        p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }
+        .column {
+            float: left;
+            width: 24%;
+            height: auto;
+            padding: 5px;
+            font-family: serif;
+            text-align: justify;
+        }
+        .content {
+            background-color: white;
+            padding: 10px;
+            border: 3px solid black;
+            margin: 5px;
+        }
+		.content img {
+			width: 50%;
+			max-height: 60px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			object-fit: contain; 
+		}
+
+		.content a{
+			display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+		}
+
+		.content a:hover{
+            background-color: #d3d3d3;
+		}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Kursus Pemrograman Web</h1>
+    <h3>Pemrograman Web A</h3>
+</div>
+<ul>
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#Catalog">Catalog</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#About">About</a></li>
+</ul>
+<div class="column">
+    <div class="content">
+        <img src="Assets/html.png" alt="" style="width:50%">
+        <h3><a href="https://www.w3schools.com/html/default.asp">HTML Tutorials</a></h3>
+        <p>
+            What is HTML? HTML stands for Hyper Text Markup Language.
+            It is the standard markup language for creating Web pages.
+            HTML describes the structure of a Web page. It consists of a series of elements.
+            HTML elements tell the browser how to display the content.
+            HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+        <img src="Assets/css.png" alt="" style="width:50%">
+        <h3><a href="https://www.w3schools.com/css/">CSS Tutorials</a></h3>
+        <p>
+            What is CSS? CSS stands for Cascading Style Sheets.
+            It describes how HTML elements are to be displayed on screen, paper, or in other media
+            CSS saves a lot of work. It can control the layout of multiple web pages all at once
+            External stylesheets are stored in CSS files
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+        <img src="Assets/php.png" alt="" style="width:50%">
+        <h3><a href="https://www.php.net/docs.php">PHP Tutorials</a></h3>
+        <p>
+            What is PHP? PHP stands for PHP: Hypertext Preprocessor.
+            It is an HTML-embedded scripting language.
+            Much of its syntax is borrowed from C, Java, and Perl with a couple of unique PHP-specific features thrown in.
+            The goal of the language is to allow web developers to write dynamically generated pages quickly.
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+        <img src="Assets/javascript.png" alt="" style="width:50%">
+        <h3><a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorials</a></h3>
+        <p>
+            JavaScript is the Programming Language for the Web.
+            JavaScript can update and change both HTML and CSS.
+            JavaScript can calculate, manipulate, and validate data.
+        </p>
+    </div>
+</div>
+</body>
+</html>
