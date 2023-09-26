@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Company Profil</title>
+    <style>
+        body {
+            font-family: serif;
+            font-size: 20px;
+            background-image: url("Assets/background.png");
+            background-size: cover;
+        }
+        .container {
+            max-width: 100%;
+            margin: auto;
+			color: #000;
+        }
+
+        .container h1{
+            max-width: 100%;
+            margin: auto;
+			text-align: left;
+			color: #000;
+        }
+
+        .container hr {
+            border: none; 
+            height: 2px; 
+            background-color: black;
+            margin: 10px 0;
+            width: 100%; 
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: right; 
+            background-color: white;
+            position: sticky;
+            top: 0; 
+            z-index: 100; 
+        }
+
+        .navigation li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .navigation li.right {
+            float: right; 
+        }
+
+        .navigation li.left {
+            float: left; 
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px 0; 
+            overflow: hidden;
+            background-color: #f9f3e5;
+            border: 3px solid black;
+        }
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: lightgray;
+        }
+        p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }
+        .column {
+            float: left;
+            width: 24%;
+            height: auto;
+            padding: 5px;
+            font-family: serif;
+            text-align: justify;
+        }
+        .content {
+            background-color: white;
+            border: 3px solid black;
+            margin: 5px;
+        }
+
+        .content p{
+            margin: 15px;
+        }
+        @keyframes imageAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.01);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: contain;
+            animation: imageAnimation 5s infinite; 
+        }
+
+        .image-container h2{
+            position: absolute;
+            top: 10%; 
+            left: 15%;  
+            color: white; 
+            padding: 10px; 
+            font-size: 80px;
+            text-align: center; 
+        }
+        .image-container h3{
+            position: absolute;
+            top: 25%; 
+            left: 5%;  
+            color: white; 
+            padding: 10px; 
+            font-size: 32px; 
+            text-align: center; 
+            text-emphasis-color: 2px black; 
+        }
+
+        .text-box {
+            position: absolute;
+            top: 50%; 
+            left: 15%; 
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white; 
+            padding: 10px; 
+            font-size: 16px;
+            animation: imageAnimation 5s infinite; 
+        }
+        .text-box:hover {
+            background-color: rgba(0, 0, 0, 1); 
+        }
+
+		.content a{
+			display: block;
+            color: black;
+            text-align: center;
+            padding: 2px 6px;
+            text-decoration: none;
+		}
+
+		.content a:hover{
+            background-color: lightgray
+		}
+        /*#f4e8ce; /*warna ori*/
+        
+        .content hr {
+            border: none; 
+            height: 2px; 
+            background-color: black;
+            margin: 10px 0; 
+        }
+        .content img {
+            margin-top: 20px;
+            width: 50%;
+            max-height: 60px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: contain;
+        }
+
+        .topcolumn hr {
+            border: none;
+            height: 2px;
+            background-color: black;
+            margin: 20px auto; 
+            width: 10%; 
+        }
+
+        .topcolumn h3 {
+            max-width: 1200px;
+            margin: auto;
+			text-align: center;
+			color: #000;
+        }
+        .copyright-bar {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .copyright-bar a {
+            color: white;
+            text-decoration: none;
+        }
+        .newline {
+            margin-bottom: 360px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Company</h1>
+        <hr>
+    </div>
+    <ul class="navigation">
+        <li class="left"><a href="#Home">Home</a></li>
+        <li class="left"><a href="#Catalog">Catalog</a></li>
+        <li class="left"><a href="#Services">Services</a></li>
+        <li class="left"><a href="#Client">Client</a></li>
+        <li class="left"><a href="#Contact">Contact</a></li>
+        <li class="left"><a href="#About">About</a></li>
+
+        <li class="right"><a href="#Sign Up">Sign Up</a></li>
+        <li class="right"><a href="#Sign In">Sign In</a></li>
+    </ul>
+<br>
+    <div class="image-container">
+        <img src="Assets/startup.jpg" alt="Startup" class="animated-image" />
+        <h2>Award Winning Company</h2>
+        <br>
+        <h3>“We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes―understanding that failure is not the opposite of success, it’s part of success.” ―Arianna Huffington</h3>
+        <a href="#" class="text-box">Learn More</a>
+        <a href="#" class="text-box" style="left:25%;">Contact Us</a>
+    </div>
+<br>
+<br>
+    <div class="topcolumn">
+        <h3>What We Do?</h3>
+        <hr>
+    </div> 
+<br>
+<div class="column">
+    <div class="content">
+        <img src="Assets/html.png" alt="" style="width:50%">
+        <h3><a href="https://www.w3schools.com/html/default.asp">HTML Tutorials</a></h3>
+        <hr>
+        <p>
+            What is HTML? HTML stands for Hyper Text Markup Language.
+            It is the standard markup language for creating Web pages.
+            HTML describes the structure of a Web page. It consists of a series of elements.
+            HTML elements tell the browser how to display the content.
+            HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+        <img src="Assets/css.png" alt="" style="width:50%">
+        <h3><a href="https://www.w3schools.com/css/">CSS Tutorials</a></h3>
+        <hr>
+        <p>
+            What is CSS? CSS stands for Cascading Style Sheets.
+            It describes how HTML elements are to be displayed on screen, paper, or in other media
+            CSS saves a lot of work. It can control the layout of multiple web pages all at once
+            External stylesheets are stored in CSS files
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+        <img src="Assets/php.png" alt="" style="width:50%">
+        <h3><a href="https://www.php.net/docs.php">PHP Tutorials</a></h3>
+        <hr>
+        <p>
+            What is PHP? PHP stands for PHP: Hypertext Preprocessor.
+            It is an HTML-embedded scripting language.
+            Much of its syntax is borrowed from C, Java, and Perl with a couple of unique PHP-specific features thrown in.
+            The goal of the language is to allow web developers to write dynamically generated pages quickly.
+        </p>
+    </div>
+</div>
+<div class="column">
+    <div class="content">
+    <img src="Assets/javascript.png" alt="" style="width:50%">
+    <h3><a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorials</a></h3>
+        <hr>
+        <p>
+            JavaScript is the Programming Language for the Web.
+            JavaScript can update and change both HTML and CSS.
+            JavaScript can calculate, manipulate, and validate data.
+        </p>
+    </div>
+</div>
+<div class="newline"></div>
+<div class="copyright-bar">
+    &copy; 2023 <a href="#">Company</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</div>
+</body>
+</html>
