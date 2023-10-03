@@ -35,19 +35,48 @@ function checkInput() {
     var nama = document.getElementsByName("Nama")[0].value;
     var check = false;
     document.getElementById("rekomendasi").innerHTML = "";
+    var prefix = "Tidak direkomendasikan:", suffix = "";
+
     if (nama.length > 0 && nama[0] === nama[0].toLowerCase()) {
-        document.getElementById("rekomendasi").innerHTML += "<br>Nama mengandung huruf kecil pada huruf pertama.";
+        suffix += "<br>Huruf pertama bukan huruf kapital.";
         check = true;
     }
     if (nama.length > 0 && (/\d/.test(nama))) {
-        document.getElementById("rekomendasi").innerHTML += "<br>Nama mengandung angka.";
+        suffix += "<br>Nama mengandung angka.";
         check = true;
     }
-    if (check==true){
 
+    if (nama.length < 3) {
+        suffix += "<br>Nama kurang dari tiga karakter.";
+        check = true;
     }
 
-    // Add other conditions based on your requirements
+    if(check == true){
+        document.getElementById("rekomendasi").innerHTML = prefix+suffix;
+    }
+}
 
-    //return check; // Return the boolean value
+function checkInputND() {
+    var namaDosen = document.getElementsByName("ND")[0].value;
+    var check = false;
+    document.getElementById("rekomendasiND").innerHTML = "";
+    var prefix = "Tidak direkomendasikan:", suffix = "";
+
+    if (namaDosen.length > 0 && namaDosen[0] === namaDosen[0].toLowerCase()) {
+        suffix += "<br>Huruf pertama bukan huruf kapital.";
+        check = true;
+    }
+    if (namaDosen.length > 0 && (/\d/.test(namaDosen))) {
+        suffix += "<br>Nama Dosen mengandung angka.";
+        check = true;
+    }
+
+    if (namaDosen.length < 3) {
+        suffix += "<br>Nama Dosen kurang dari tiga karakter.";
+        check = true;
+    }
+
+    if (check == true) {
+        document.getElementById("rekomendasiND").innerHTML = prefix + suffix;
+    }
 }
