@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyForm</title>
+    <link rel="stylesheet" href="assets/home-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- menu dan logo di wrapper -->
+        <div class="wrapper">
+            <!-- logo -->
+            <div class="logo">
+                <a href="#">MyForm</a>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="signup">
+            <br><br>
+            <!-- form -->
+            <form name="formPendaftaran" action="#" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+                <!-- logo dalam form -->
+                <div class="logo">
+                    <a href="#">MyForm</a>
+                </div>
+                <br>
+
+                <label for="Nama">Nama Lengkap:</label>
+                <input type="text" name="Nama" placeholder="Nama Lengkap"  oninput="checkInput()">
+                <div id="rekomendasi"></div>
+                <br>
+                <label for="NIM">Nomor Induk Mahasiswa:</label>
+                <input type="number" name="NIM" pattern="[0-9]+" placeholder="Nomor Induk Mahasiswa">
+                <br>
+
+                <label for="Gender">Jenis Kelamin:</label>
+                <select name="Gender">
+                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                <br>
+
+                <label for="MK">Mata Kuliah:</label>
+                <select name="MK">
+                    <option value="" disabled selected>Pilih Mata Kuliah</option>
+                    <option value="Matematika">Matematika</option>
+                    <option value="Fisika">Fisika</option>
+                    <option value="Kimia">Kimia</option>
+                    <option value="Biologi">Biologi</option>
+                    <option value="Sejarah">Sejarah</option>
+                    <option value="Ekonomi">Ekonomi</option>
+                    <option value="Bahasa Inggris">Bahasa Inggris</option>
+                    <option value="Ilmu Komputer">Ilmu Komputer</option>
+                    <option value="Statistika">Statistika</option>
+                    <option value="Sosiologi">Sosiologi</option>
+                    <option value="Seni Rupa">Seni Rupa</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                    <option value="Manajemen">Manajemen</option>
+                    <option value="Hukum">Hukum</option>
+                    <option value="Psikologi">Psikologi</option>
+                </select>
+                <br>
+                
+                <label for="ND">Nama Dosen:</label>
+                <input type="text" name="ND" placeholder="Nama Dosen">
+                <br>
+
+                <button type="submit">Submit</button>
+                <br>
+                <span id="successMessage">Form berhasil disubmit!</span>
+            </form>
+        </div>
+    </div>
+    <script src="assets/home-script.js"></script>
+</body>
+</html>
