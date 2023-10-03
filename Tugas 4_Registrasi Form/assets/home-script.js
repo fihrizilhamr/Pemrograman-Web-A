@@ -16,6 +16,11 @@ function validateForm() {
         document.forms["formPendaftaran"]["NIM"].focus();
         return false;
     }
+    if (document.forms["formPendaftaran"]["Gender"].value == "") {
+        alert("Pilih Jenis Kelamin");
+        document.forms["formPendaftaran"]["Gender"].focus();
+        return false;
+    }
     if (document.forms["formPendaftaran"]["MK"].value == "") {
         alert("Pilih Mata Kuliah");
         document.forms["formPendaftaran"]["MK"].focus();
