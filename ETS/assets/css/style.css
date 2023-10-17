@@ -20,12 +20,19 @@ body {
     position: relative;
 }
 
+.wrapper-nav{
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
 .logo a{
     font-size: 50px;
     font-weight: bold;
     float: left;
     font-family: 'Courier New', Courier, monospace;
     color: #213555;
+    margin-left: 3%;
 }
 
 .menu {
@@ -42,6 +49,8 @@ nav {
     top: 0;
     background: #F0F0F0;
     z-index: 1;
+    margin: 0px;
+    padding: 0px;
 }
 
 nav ul {
@@ -95,18 +104,18 @@ section {
 }
 
 a.tombol-biru {
-    background: #E5D283;
+    background: #4F709C;
     border-radius: 0.5rem;
     margin-left: 10px;
     margin-top: 20px;
     padding: 10px 15px 10px 15px;
-    color: #213555;
+    color: #F0F0F0;
     cursor: pointer;
     font-weight: bold;
 }
 
 a.tombol-biru:hover {
-    background: #64CCC5;
+    background: #213555;
     text-decoration: none;
 }
 
@@ -198,17 +207,24 @@ a.tombol-biru:hover {
     font-size: 0.9rem;
 }
 
-.blog-text .blog-title{
+.blog-text .blog-title {
     font-size: 1.3rem;
     font-weight: 500;
     text-align: center;
     color: #213555;
+    white-space: nowrap;      /* Prevent line breaks */
+    overflow: hidden;         /* Hide overflowing content */
+    text-overflow: ellipsis;  /* Display an ellipsis (...) when content overflows */
 }
 
-.blog-text .blog-title:hover{
+.blog-text .blog-title:hover {
     color: #E5D283;
     transition: all ease 0.3s;
+    white-space: normal;      /* Allow the text to wrap and display full content */
+    overflow: visible;        /* Display overflowing content */
+    text-overflow: initial;   /* Default text-overflow behavior */
 }
+
 
 .blog-text p{
     color: #526D82;
@@ -365,19 +381,166 @@ a.tombol-biru:hover {
     max-height: 40px;
     opacity: 1;
 }
+
+.card a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit;         /* Use the color of the parent element (default color) */
+}
+
+.card a:hover {
+    text-decoration: none;  /* Remove underline on hover */
+    color: inherit;         /* Use the color of the parent element on hover */
+}
+
 #map {
     margin: 20px 0; /* Adjust margin as needed */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Display children in a column */
     align-items: center;
+    border-top: 1px solid #213555;
 }
-  
-iframe {
-    align-items: center;
+
+.map-container {
+    margin-top: 10px; /* Adjust margin as needed */
     width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    overflow: hidden; /* Ensure the shadow is contained */
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
     height: 400px; /* Adjust height as needed */
     border: 3px solid #ddd; /* Add a subtle border */
     border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  }
-  
+}
+
+.map-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.map-heading h3 {
+    font-size: 2.4rem;
+    color: #213555;
+    font-weight: 600;
+}
+
+#koleksi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.book {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #4F709C;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book h4 {
+    font-size: 1.2rem;
+    color: #213555;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;         /* Hide overflowing content */
+    text-overflow: ellipsis;  /* Display an ellipsis (...) when content overflows */
+}
+
+.book p {
+    font-size: 0.9rem;
+    color: #4F709C;
+    margin-top: 5px;
+    white-space: nowrap;      /* Prevent line breaks */
+    overflow: hidden;         /* Hide overflowing content */
+    text-overflow: ellipsis;  /* Display an ellipsis (...) when content overflows */
+}
+
+/* form */
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.signup form {
+    background-color: #F0F0F0;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; 
+    width: 100%; 
+}
+
+.signup form .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup form .logo a {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #213555;
+}
+
+.signup form label{
+    display: block;
+    text-align: left; 
+    margin-bottom: 5px; 
+}
+
+
+.signup form input,
+.signup form select,
+.signup form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.signup form input:hover,
+.signup form select:hover,
+.signup form textarea:hover {
+    background-color: lightgray;
+}
+
+.signup form button[type="submit"] {
+    background: #4F709C;
+    border-radius: 0.5rem;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #F0F0F0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup form button[type="submit"]:hover {
+    background: #213555;
+    text-decoration: none;
+}
